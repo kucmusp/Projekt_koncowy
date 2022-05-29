@@ -1,0 +1,32 @@
+TCID,Tytuł,Warunki wstępne,ID Kroku,Opis kroku,Oczekiwany rezultat
+1,Interfejs – czas reakcji,"Aplikacja uruchomiona, użytkowknik zalogowany.",1,"Kliknąć w dowolny element interface'u, który jest przyciskiem/odsyłaczem do jakiejś funkcji/strony",Aplikacja przekieruje użytkownika w odpowiednie miejsce lub uruchomi odpowiednią funkcję
+,,,2,Zmierzyć czas reakcji interface'u od momentu kliknięcia do pełnego załadowania klikniętej funkcji,Wybrany element załadował się w czasie do 1 sekundy
+2,Sprawdzenie czy aplikacja MrBuggy 3 jest portable,plik z archiwum zip aplikacji MrBuggy,1,Wypakuj archiwum MrBuggy do folderu,
+,,,2,Uruchom plik wykonalny MrBuggy3.exe,Aplikacja uruchomiła się. 
+3,Zużycie pamięci operacyjnej przez program MrBuggy3,System operacyjny zgodny ze specyfikacją programu tj. co najmniej Windows 7-8,1,uruchomić program Mrbuggy 3,
+,,,2,uruchomić w systemie opecayjnym medżer zadań,
+,,,3,w menedżerze zadań w zakładce procesy odszukać aplikację Mrbuggy3,
+,,,4,w kolumnie pamięć odczytać wratość,Według specyfiakcji aplikacji MrBuggy 3 program po uuchomieniu nie powinien zużywać więcje niż 100 mb pamieci operacyjnej komputera
+4,dostęp do części serwerowej aplikacji musi być zabezpieczony loginem i hasłem,przejście do panelu umożliwiającego zalogowanie się do części serwerowej aplikacji.,1,Kroki 1: Wchodzimy do panelu logowania w części serwerowej,
+,,,2,Krok 2: Wpisujemy login w pole „login”,
+,,,3,Krok 3: Wpisujemy hasło w pole „hasło” ,
+,,,4,"Krok 4: Naciskamy przycisk ,,zaloguj”",Oczekiwany rezultat:Po wpisaniu prawidłowego loginu oraz hasła  - uzyskujemy dostępu do konta
+5,"Sprawdzenie komunikatów, informacji oraz klawiszy interfejsu graficznego",Uruchomienie  aplikacji / aplikacja działa,1,"1.        Uruchomienie programu,",
+,,,2,"2.        Sprawdzenie pola „Opis zadania”,",
+,,,3,"3.        Sprawdzenie wszystkich dostępnych w aplikacji przycisków,",
+,,,4,"4.        Manualne wybieranie kolejnych zadań programu w poszukiwaniu błędów językowych,",Komunikaty będą wyświetlane w języku polskim.
+6,Logowanie z użyciem poprawnego loginu,"aplikacja uruchomiona, otwarte okno logowania w aplikacji MrBuggy3",1,"W polu ""login"" wpisz login spełniając nastęujące warunki: 4 do 8 znaków, jedna mała litera, jedna wielka litera, jedna cyfra jeden znak specjalny",pojawia sie informacja o podaniu poprawnego loginu
+7,Logowanie z białymi znakami oraz polskimi znakami dialektycznymi.,Użytkownik znajduje się na ekranie logowania w aplikacji MrBuggy3,1,Wprowadź login ze znakami białymi oraz dialektycznymi. ,Pole zostało uzupełnione.
+,,,2,Naciśnij przycisk zaloguj.,"Użytkownik nie został zalogowany, pojawia się komunikat o błędzie."
+8,Nadawanie hasła do konta - happy path,"Otwarcie aplikacji internetowej MrBuggy3 w oknie do rejestracji konta, podanie poprawnego loginu",1,"podanie hasła zawierającego: - co najmniej 8 znaków, - przynajmniej jedną wielką literę, - jedną cyfrę, - jeden znak specjalny.",Utworzenie konta w aplikacji 
+9,Weryfikacja pól panelu bocznego,Użytkownik ma pobraną aplikacji MrBuggy 3,1,Rozpakuj plik zip.,Plik został rozpakowany.
+,,,2,Uruchom aplikacje Mr Buggy 3,Aplikacja została uruchomiona.
+,,,3,Zaloguj się do aplikacji wprowadzając login i hasło.,Użytkownik został zalogowany.
+,,,4,"Po zalogowaniu sprawdź, czy panel boczny zawiera takie pola jak: czas, nr zadania, opis zadania, lista zadań, następne, poprzednie, znalazłem defekt, zakończ, status połaczenia.",Pole boczne zawiera wszytkie wymagane pola.
+10,Tworzenie kopi zapasowej,Użytkownik jest zalogowany do aplikacji mr buggy3,1,W zad1 i zad15  <znalazłem defekt>,
+,,,2,Zakończ działanie aplikacji za pomoca menedżera zadań,
+,,,3,Ponownie uruchom aplikację mr buggy3,
+,,,4,Zaloguj się tym samym loginem i hasłem,"Błąd będzie zgłoszony tylko w zadaniach 1 i 15, w pozostałych zadaniech błąd nie będzie zgłoszony"
+11,Test pracy aplikacji po odlaczeniu od internetu,Uruchomiona aplikacja MrBuggy3 wraz ze sprawnym połączeniem internetowym,1,Odłącz na komputerze połączenie internetowe,Po utracie połaczenia internetowegho aplikacja pozwala dalej wykonywać zadania
+,,,2,Przystąp do wykonywania zadań,
+12,Trzykrotne wpisanie błędnego hasła,Użytkownik posiada konto w aplikacji MrBuggy3. Aplikacja uruchomiona,1,"Wpisz w pole logowania login użytkownika oraz, trzykrotnie, błędne hasło",Konto w aplikacji zostanie zablokowane. Wyświetla się komunikat o blokadzie.
